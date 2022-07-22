@@ -1,0 +1,14 @@
+import wxgl
+import wxgl.glplot as glt
+
+glt.subplot(121)
+glt.title('经纬度网格生成球体')
+glt.uvsphere((0,0,0), 1, texture=wxgl.Texture('res/earth.jpg'))
+glt.grid()
+
+glt.subplot(122)
+glt.title('正八面体迭代细分生成球体')
+glt.isosphere((0,0,0), 1, color=(0,1,1), fill=False, iterations=5)
+glt.grid()
+
+glt.show()
